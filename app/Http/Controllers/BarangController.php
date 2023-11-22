@@ -6,6 +6,11 @@ use App\Models\Barang;
 
 class BarangController extends Controller
 {
+    public function praktikum()
+    {
+        return view('utama');
+    }
+
     public function create()
     {
         return view('barang');
