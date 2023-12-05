@@ -8,14 +8,31 @@
 </head>
 <body>
     <h1>Hasil</h1>
-    <p><strong>Kode Barang:</strong> {{ $barang->kode_barang }}</p>
-    <p><strong>Nama Barang:</strong> {{ $barang->nama_barang }}</p>
-    <p><strong>Jenis Varian:</strong> {{ $barang->jenis_varian }}</p>
-    <p><strong>Qty:</strong> {{ $barang->qty }}</p>
-    <p><strong>Harga Jual:</strong> {{ $barang->harga_jual }}</p>
-    <p><strong>Total Harga Jual:</strong> {{ $totalHargaJual }}</p>
-    <p><strong>Diskon:</strong> {{ $diskon }}</p>
-    <p><strong>Harga Setelah Diskon:</strong> {{ $hargaSetelahDiskon }}</p>
-
+    <table border="1">
+        <tr>
+            <th>Kode Barang</th>
+            <th>Nama Barang</th>
+            <th>Jenis Varian</th>
+            <th>Qty</th>
+            <th>Harga Jual</th>
+            <th>Total Harga Jual</th>
+            <th>Diskon</th>
+            <th>Harga Setelah Diskon</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>{{ $barang->kode_barang }}</td>
+            <td>{{ $barang->nama_barang }}</td>
+            <td>{{ $barang->jenis_varian }}</td>
+            <td>{{ $barang->qty }}</td>
+            <td>{{ $barang->harga_jual }}</td>
+            <td>{{ $totalHargaJual }}</td>
+            <td>{{ $diskon }}</td>
+            <td>{{ $hargaSetelahDiskon }}</td>
+            <td>
+                <a href="{{ route('edit', ['id' => $barang->id]) }}">Edit</a>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
